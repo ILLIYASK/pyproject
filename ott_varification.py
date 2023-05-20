@@ -23,14 +23,6 @@ class OtpVarifier(Tk):
         self.verification = self.client.verify.v2.services(verify_sid) \
             .verifications \
             .create(to=verified_number, channel="sms")
-    def update(self):
-        self.time=self.time-1
-        print(self.time)
-        if self.time>=-1:
-            self.timer_label()
-        else:
-            messagebox.showinfo("showinfo","time out ")
-            window.destroy()
 
     def Labels(self):
         self.c=Canvas(self,bg="light blue",width=400,height=280)
