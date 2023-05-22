@@ -47,9 +47,10 @@ class Front(Tk):
         self.password_label=Label(self.login_frame,text="Enter password :",
                                   font=("Comic Sans MS", 15, "bold"),width=15,)
 
-        self.password_entry=Entry(self.login_frame,font=("Comic Sans MS", 14, ),width=20)
+        self.password_entry=Entry(self.login_frame,font=("Comic Sans MS", 14, ),width=20,
+                                  )
 
-        self.var=IntVar(value=0)
+        self.var=IntVar()
         self.password_checkbutton=Checkbutton(self.login_frame,offvalue=0, onvalue=1,
                                               variable=self.var,command=lambda :shwpsd(self.var,self.password_entry))
 

@@ -32,12 +32,12 @@ class OtpVarifier(Tk):
 
     def timer_label(self):
         self.time-=1
-        if self.time>=0:
+        if self.time>=110:
             self.timer=Label(self,bg="black",fg="white",width=44,height=3,text=f" 00 : {self.time//60:>02}: {self.time%60:>02}")
             self.timer.place(x=300,y=450)
             self.timer.after(1000,self.timer_label)
         else:
-            window.destroy()
+            self.destroy()
 
 
     def entry(self):
